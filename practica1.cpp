@@ -36,9 +36,9 @@ int main () {
 		scanf("%s",libros[i].autor);
 		printf("Editorial: ");
 		scanf("%s",libros[i].editorial);
-		printf("Año: ");
+		printf("AÃ±o: ");
 		scanf("%d", libros[i].ano);
-		printf("Número de páginas:");
+		printf("NÃºmero de pÃ¡ginas:");
 		scanf("%d", libros[i].numPaginas);
 
 	}
@@ -99,7 +99,7 @@ int main () {
 	fprintf(archivo, libros[4].numPaginas, "\n");
 	fprintf(archivo, "\n");
 
-	//Se notifica la creación del archivo
+	//Se notifica la creaciÃ³n del archivo
 	printf("Has creado un archivo");
 	printf("\n");
 
@@ -108,12 +108,21 @@ int main () {
 
     int opcion;
 	do {
-        printf("1.-Modificar datos de libro \n");
-        printf("2-.Cerrar programa\n");
-	}
+        	printf("1.-Modificar datos de libro \n");
+        	printf("2-.Cerrar programa\n");
+		printf("Ingresar opcion:");
+		scanf("%i", &opcion);
+		switch (opcion) {
+		case 1: modificacion();
+		break;
+		case 2: finalizar();
+		break;
+		}
+	}while (opcion<=2 && opcion!=0);
 
 	system("pause");
 	return 0;
+	
 }
 
 
